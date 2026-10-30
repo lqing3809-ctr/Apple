@@ -31,6 +31,19 @@
         .btn-vpn { background: linear-gradient(135deg, #1677ff, #0958d9); }
         .contact-box { background: #f0f5ff; border: 1px solid #adc6ff; padding: 12px; border-radius: 10px; margin-top: 10px; text-align: center; font-size: 14px; color: #1d39c4; }
         .contact-box span { font-weight: bold; color: #092b00; background: #e6f7ff; padding: 2px 8px; border-radius: 4px; border: 1px solid #91caff; -webkit-user-select: all; user-select: all; }
+        .acc-card { background: #ffffff; border-radius: 16px; padding: 18px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .acc-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+        .acc-name { font-size: 17px; font-weight: 700; color: #1d1d1f; margin-bottom: 8px; }
+        .region-badge { display: inline-block; background: #1677ff; color: #fff; font-size: 12px; font-weight: bold; padding: 3px 12px; border-radius: 12px; }
+        .acc-meta { text-align: right; font-size: 12px; color: #86868b; flex-shrink: 0; }
+        .status-ok { color: #52c41a; font-weight: bold; font-size: 14px; }
+        .status-ok::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #52c41a; margin-right: 5px; }
+        .check-time { margin-top: 4px; }
+        .acc-btns { display: flex; gap: 10px; }
+        .copy-btn { flex: 1; background: #fff; border: 1px solid #d9d9d9; border-radius: 10px; padding: 11px 0; font-size: 15px; font-weight: bold; color: #1677ff; cursor: pointer; }
+        .copy-btn:active { background: #f0f5ff; }
+        .toast { position: fixed; left: 50%; top: 42%; transform: translate(-50%, -50%) scale(0.9); background: rgba(0,0,0,0.85); color: #fff; padding: 16px 28px; border-radius: 14px; font-size: 15px; text-align: center; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; z-index: 9999; max-width: 82%; word-break: break-all; }
+        .toast.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
     </style>
 </head>
 <body>
@@ -69,54 +82,77 @@
         </div>
         
         <div class="update-time">📅 最近更新时间：2026年10月30日</div>
-        <!-- 账号 1 -->
-        <div class="account-box">
-            <div class="account-row">
-                <span class="label">🇺🇸美区账号 1：</span>
-                <span class="val">AshleyBrown1624@outlook.com</span>
+    </div>
+    
+    <div class="acc-card">
+        <div class="acc-head">
+            <div>
+                <div class="acc-name">As***@outlook.com</div>
+                <span class="region-badge">【美国】</span>
             </div>
-            <div class="account-row">
-                <span class="label">密码：</span>
-                <span class="val">T9zApdppfq</span>
-            </div>
-        </div>
-
-        <!-- 账号 2 -->
-        <div class="account-box">
-            <div class="account-row">
-                <span class="label">🇺🇸美区账号 2：</span>
-                <span class="val">k7893v01@icloud.com</span>
-            </div>
-            <div class="account-row">
-                <span class="label">密码：</span>
-                <span class="val">mhAM8RBphM</span>
+            <div class="acc-meta">
+                <div class="status-ok">正常</div>
+                <div class="check-time">检测：2026-10-30 14:20:10</div>
             </div>
         </div>
-
-        <!-- 账号 3 -->
-        <div class="account-box">
-            <div class="account-row">
-                <span class="label">🇺🇸美区账号 3：</span>
-                <span class="val">JoelWoodrqu@outlook.com</span>
+        <div class="acc-btns">
+            <button class="copy-btn" onclick="copyText('AshleyBrown1624@outlook.com')">复制账号</button>
+            <button class="copy-btn" onclick="copyText('T9zApdppfq')">复制密码</button>
+        </div>
+    </div>
+    
+    <div class="acc-card">
+        <div class="acc-head">
+            <div>
+                <div class="acc-name">k7***@icloud.com</div>
+                <span class="region-badge">【美国】</span>
             </div>
-            <div class="account-row">
-                <span class="label">密码：</span>
-                <span class="val">1f5NDcX3nc</span>
+            <div class="acc-meta">
+                <div class="status-ok">正常</div>
+                <div class="check-time">检测：2026-10-30 14:20:10</div>
             </div>
         </div>
-
-        <!-- 账号 4 -->
-        <div class="account-box">
-            <div class="account-row">
-                <span class="label">🇺🇸美区账号 4：</span>
-                <span class="val">TaylorKing6316@outlook.com</span>
+        <div class="acc-btns">
+            <button class="copy-btn" onclick="copyText('k7893v01@icloud.com')">复制账号</button>
+            <button class="copy-btn" onclick="copyText('mhAM8RBphM')">复制密码</button>
+        </div>
+    </div>
+    
+    <div class="acc-card">
+        <div class="acc-head">
+            <div>
+                <div class="acc-name">Jo***@outlook.com</div>
+                <span class="region-badge">【美国】</span>
             </div>
-            <div class="account-row">
-                <span class="label">密码：</span>
-                <span class="val">g4ZQtnVMF1</span>
+            <div class="acc-meta">
+                <div class="status-ok">正常</div>
+                <div class="check-time">检测：2026-10-30 14:20:10</div>
             </div>
         </div>
-
+        <div class="acc-btns">
+            <button class="copy-btn" onclick="copyText('JoelWoodrqu@outlook.com')">复制账号</button>
+            <button class="copy-btn" onclick="copyText('1f5NDcX3nc')">复制密码</button>
+        </div>
+    </div>
+    
+    <div class="acc-card">
+        <div class="acc-head">
+            <div>
+                <div class="acc-name">Ta***@outlook.com</div>
+                <span class="region-badge">【美国】</span>
+            </div>
+            <div class="acc-meta">
+                <div class="status-ok">正常</div>
+                <div class="check-time">检测：2026-10-30 14:20:10</div>
+            </div>
+        </div>
+        <div class="acc-btns">
+            <button class="copy-btn" onclick="copyText('TaylorKing6316@outlook.com')">复制账号</button>
+            <button class="copy-btn" onclick="copyText('g4ZQtnVMF1')">复制密码</button>
+        </div>
+    </div>
+    
+    <div class="card">
         <div class="step-guide">
             💡 <b>正确登录三步法：</b><br>
             1. 打开 <b>App Store</b> ➔ 点击右上角头像 ➔ 拉到最底部点击“退出登录”。<br>
@@ -137,5 +173,32 @@
         </div>
     </div>
 </div>
+<div id="toast" class="toast"></div>
+<script>
+function showToast(html) {
+    var t = document.getElementById('toast');
+    t.innerHTML = html;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(function(){ t.classList.remove('show'); }, 1800);
+}
+function copyText(text) {
+    function done(){ showToast('已复制：<br>' + text); }
+    function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); }
+        catch(e) { showToast('复制失败，请长按手动复制'); }
+        document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+    } else { fallback(); }
+}
+</script>
 </body>
 </html>
